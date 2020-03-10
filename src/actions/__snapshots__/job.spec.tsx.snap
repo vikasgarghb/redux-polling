@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Job Actions should create job 1`] = `
+Object {
+  "type": "ON_CREATE_JOB",
+}
+`;
+
+exports[`Job Actions should get the status of given job 1`] = `
+Object {
+  "jobId": "123",
+  "type": "ON_GET_STATUS",
+}
+`;
+
+exports[`Job Actions should issue job is complete 1`] = `
+Object {
+  "type": "ON_COMPLETE_PROCESSING",
+}
+`;
