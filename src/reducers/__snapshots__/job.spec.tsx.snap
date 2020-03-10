@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Job Reducer should handle ON_COMPLETE_PROCESSING action 1`] = `
+Object {
+  "fetching": false,
+  "processing": false,
+}
+`;
+
+exports[`Job Reducer should handle ON_CREATE_JOB action 1`] = `
+Object {
+  "fetching": false,
+  "processing": true,
+}
+`;
+
+exports[`Job Reducer should handle ON_ERROR action 1`] = `
+Object {
+  "fetching": false,
+  "job": Object {
+    "status": "Failed",
+  },
+  "processing": false,
+}
+`;
+
+exports[`Job Reducer should handle ON_GET_STATUS action 1`] = `
+Object {
+  "fetching": true,
+  "processing": false,
+}
+`;
+
+exports[`Job Reducer should handle ON_SUCCESS action 1`] = `
+Object {
+  "fetching": false,
+  "job": Object {
+    "id": "123",
+    "status": "Created",
+  },
+  "processing": false,
+}
+`;
+
+exports[`Job Reducer should handle ON_SUCCESS_GET_STATUS action 1`] = `
+Object {
+  "fetching": false,
+  "job": Object {
+    "status": Object {
+      "status": "Processing",
+    },
+  },
+  "processing": false,
+}
+`;
