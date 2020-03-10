@@ -23,6 +23,7 @@ module.exports = {
     '!src/**/*spec.(ts|tsx)',
     '!src/**/**/*spec.(ts|tsx)',
     '!src/store/*.(ts|tsx)',
+    '!src/mocks/*.(ts|tsx)',
   ],
   coverageThreshold: {
     global: {

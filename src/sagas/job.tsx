@@ -31,7 +31,7 @@ export function* getStatus(action) {
   const { jobId } = action;
 
   yield get({
-    url: `/${jobId}/status`,
+    url: `/job/${jobId}/status`,
     onSuccess: ON_SUCCESS_GET_STATUS,
     onError: ON_ERROR,
   });
