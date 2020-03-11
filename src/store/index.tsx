@@ -2,7 +2,7 @@ import axios from 'axios';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from '../reducers';
 import createSagaMiddleware from 'redux-saga';
-import { allSaga } from 'src/sagas';
+import { allSaga } from '../sagas';
 
 const configureStore = () => {
   const sagaMiddleware = createSagaMiddleware({
