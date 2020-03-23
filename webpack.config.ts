@@ -1,12 +1,7 @@
-// import CompressionPlugin from 'compression-webpack-plugin';
-// import CopyWebpackPlugin from 'copy-webpack-plugin';
-// import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import { resolve, join } from 'path';
 import createStyledComponentsTransformer from 'typescript-plugin-styled-components';
 import { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-
-// import * as tsconfig from './tsconfig.json';
 
 const styledComponentsTransformer = createStyledComponentsTransformer();
 
@@ -18,16 +13,9 @@ const baseConfig: Configuration = {
     path: resolve(__dirname, 'build'),
     publicPath: '/',
   },
-  // devServer: {
-  //   historyApiFallback: true,
-  //   hot: true,
-  //   headers: {
-  //     'Access-Control-Allow-Origin': '*',
-  //     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-  //     'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization',
-  //   },
-  //   port: 8081,
-  // },
+  devServer: {
+    port: 8081,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: join(__dirname, '/src/index.html'),
