@@ -6,7 +6,7 @@ import {
   ON_GET_STATUS,
   JobStatus,
 } from '../actions/job.types';
-import { select, put, delay, takeLatest } from 'redux-saga/effects';
+import { select, put, delay, takeLatest, all } from 'redux-saga/effects';
 import { getJob } from '../selectors/job';
 import { post, get } from './common';
 import { getJobStatus, jobIsComplete } from '../actions/job';
@@ -44,7 +44,7 @@ export function* isJobComplete() {
   }
 
   if ([JobStatus.Created, JobStatus.Processing].includes(job.status)) {
-    yield delay(4000);
+    yield delay(2000);
     return yield put(getJobStatus(job.id));
   }
 
@@ -54,10 +54,10 @@ export function* isJobComplete() {
 }
 
 export default function* root() {
-  return yield [
+  return yield all([
     takeLatest(ON_CREATE_JOB, createJob),
     takeLatest(ON_GET_STATUS, getStatus),
     takeLatest(ON_SUCCESS, startPollingForStatus),
     takeLatest(ON_SUCCESS_GET_STATUS, isJobComplete),
-  ];
+  ]);
 }
