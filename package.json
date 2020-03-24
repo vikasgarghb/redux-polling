@@ -49,6 +49,7 @@
     "jest": "^25.1.0",
     "json-server": "^0.16.1",
     "lint-staged": "^10.0.8",
+    "minimist": "^1.2.5",
     "nodemon": "^2.0.2",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prettier": "^1.19.1",
