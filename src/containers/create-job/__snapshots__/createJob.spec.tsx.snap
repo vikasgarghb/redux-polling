@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateJob Should match snapshot 1`] = `
+<styled.div>
+  <button
+    onClick={[Function]}
+  >
+    Create Job
+  </button>
+</styled.div>
+`;
+
+exports[`CreateJob should match snapshot with job completed 1`] = `
+<styled.div>
+  <button
+    onClick={[Function]}
+  >
+    Create Job
+  </button>
+  <span>
+    Job Created!!!
+  </span>
+</styled.div>
+`;
+
+exports[`CreateJob should match snapshot with processing icon 1`] = `
+<styled.div>
+  <button
+    onClick={[Function]}
+  >
+    Create Job
+  </button>
+  <Processing
+    title="Processing"
+  />
+</styled.div>
+`;

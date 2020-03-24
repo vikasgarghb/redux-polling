@@ -118,7 +118,7 @@ describe('jobSagas', () => {
   describe('isJobComplete', () => {
     it.each`
       label | status | put
-      ${'issue job is complete state change'} | ${JobStatus.Complete} | ${{
+      ${'issue job is complete state change'} | ${JobStatus.Completed} | ${{
   type: ON_COMPLETE_PROCESSING,
 }}
       ${'handle error condition when status is failed'} | ${JobStatus.Failed} | ${{

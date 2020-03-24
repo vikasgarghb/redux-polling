@@ -39,7 +39,7 @@ export function* getStatus(action) {
 
 export function* isJobComplete() {
   const job = yield select(state => getJob(state));
-  if (job.status === JobStatus.Complete) {
+  if (job.status === JobStatus.Completed) {
     return yield put(jobIsComplete());
   }
 

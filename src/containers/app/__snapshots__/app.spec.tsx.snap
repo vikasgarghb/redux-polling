@@ -5,5 +5,6 @@ exports[`App should match snapshot 1`] = `
   <h1>
     Redux Polling
   </h1>
+  <Connect(CreateJob) />
 </div>
 `;

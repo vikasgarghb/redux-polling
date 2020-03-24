@@ -14,7 +14,7 @@ export interface JobState {
 export enum JobStatus {
   Created = 'Created',
   Processing = 'Processing',
-  Complete = 'Complete',
+  Completed = 'Completed',
   Failed = 'Failed',
 }
 

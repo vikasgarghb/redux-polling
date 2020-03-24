@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 import { combineReducers } from 'redux';
-import jobReducer from './job';
+import job from './job';
 
-const rootReducer = combineReducers({ jobReducer });
+const rootReducer = combineReducers({ job });
 
 export default rootReducer;
